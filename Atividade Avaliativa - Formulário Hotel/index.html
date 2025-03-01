@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel ÉdaHora</title>
+    <style> /* Estilização */
+        body{
+            margin: 0;
+            padding: 10;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e7e8ea;
+            color: #333
+        }
+        header{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1{
+            font-size: 30px;
+            padding: 20px
+        }
+        main{
+            width: 80%;
+            min-height: 300px;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0,0, 0, 0.2);
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body> <!-- Conteúdo Principal -->
+    <header> <!-- Cabeçalho -->
+        <h1>Hotel ÉdaHora (mt bão o site msmmm)</h1>
+    </header>
+
+    <main> <!-- Conteúdo Primário -->
+        <h2>Formulário de Reserva</h2>
+        <form action="/salvar.html" method="post">
+
+            <div id="informaçõesPessoais">
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+
+                    <label for="txt_nome">Nome</label> <!-- Hóspede -->
+                    <input type="text", id="txt_nome", name="nomeHospede", placeholder="Davi Meurer..." required>
+                    <br></br>
+
+                    <label for="em_email">E-mail</label> <!-- E-mail -->
+                    <input type="email", id="em_email", name="Email", placeholder="joao123@gmail.com" required>
+                    <br></br>
+
+                    <label for="tel_telefone">Telefone</label> <!-- Telefone -->
+                    <input type="", id="tel_telefone", name="Telefone", placeholder="(xx) 9xxxx-xxxx">
+                    <br><br>
+
+                    <label for="txt_endereco">Endereço Completo</label> <!-- Endereço -->
+                    <input type="text" id="txt_endereco" name="Endereco" placeholder="Rua/Avenida, Numero; Bairro, Cidade; CEP"
+                    style="min-width: 280px;">
+                    <br>
+
+                </fieldset>
+            </div>
+            <br>
+            
+            <div id="formularioDados">
+                <fieldset>
+                    <legend>Dados Do Formulário</legend>
+
+                    <label for="date_checkin">Data de Check-in</label>
+                    <input type="date", id="date_checkin", name="DatadeCheckin", required>
+                    <br><br>
+
+                    <label for="date_checkout">Data de Check-out</label>
+                    <input type="date", id="date_checkout", name="DatadeCheckout", required>
+
+                    <label>Tamanho do Quarto</label>
+                    <input type="radio" id="rgpequeno" name="Quarto" value="pequeno">
+                    <label for="iniciante">Iniciante</label>
+
+                    <input type="radio" id="inter" name="ingles" value="intermediario">
+                    <label for="inter">Intermediário</label>
+
+                    <input type="radio" id="avancado" name="ingles" value="avancado">
+                    <label for="avancado">Avançado</label>
+                    <br><br>
+                    
+                </fieldset>
+            </div>
+            
+
+        </form>
+    </main>
+
+    <footer style="background: black; color: white; padding: 20px; bottom: 0; position: absolute; width: 100%; text-align: center;">
+        <p>© Hotel ÉdaHora 2025 - Todos os Direitos Reservados</p>
+    </footer>
+
+</body>
+
+</html>

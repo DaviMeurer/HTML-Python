@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel ÉdaHora</title>
+    <style> /* Estilização */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e7e8ea;
+            color: #333;
+            min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da janela */
+            position: relative; /* Para o rodapé ser posicionado com relação ao body */
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: absolute; /* Posiciona o rodapé em relação ao body */
+            bottom: 0; /* Fixa o rodapé na parte inferior da página */
+            width: 100%; /* Faz o rodapé ocupar toda a largura da tela */
+        }
+
+        /* Estilo para o formulário */
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            min-width: 280px;
+        }
+    </style>
+</head>
+
+<body> <!-- Conteúdo Principal -->
+    <header> <!-- Cabeçalho -->
+        <h1>Hotel ÉdaHora (mt bão o site msmmm)</h1>
+    </header>
+
+    <main> <!-- Conteúdo Primário -->
+        <h2>Formulário de Reserva</h2>
+        <form action="/salvar.html" method="post">
+
+            <div id="informaçõesPessoais">
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+
+                    <label for="txt_nome">Nome</label> <!-- Hóspede -->
+                    <input type="text" id="txt_nome" name="nomeHospede" placeholder="Davi Meurer..." required>
+                    <br>
+
+                    <label for="em_email">E-mail</label> <!-- E-mail -->
+                    <input type="email" id="em_email" name="Email" placeholder="joao123@gmail.com" required>
+                    <br>
+
+                    <label for="tel_telefone">Telefone</label>
+                    <input type="text" id="tel_telefone" name="Telefone" placeholder="(xx) 9xxxx-xxxx">
+                    <br>
+
+                    <label for="txt_endereco">Endereço Completo</label>
+                    <input type="text" id="txt_endereco" name="Endereco" placeholder="Rua/Avenida, Numero; Bairro, Cidade; CEP">
+                </fieldset>
+            </div>
+            <div id="formularioDados">
+                <fieldset>
+                    <legend>Dados Do Formulário</legend>
+
+                    <label for="date_checkin">Data de Check-in</label>
+                    <input type="date", id="date_checkin", name="DatadeCheckin", required>
+
+                    <label for="date_checkout">Data de Check-out</label>
+                    <input type="date", id="date_checkout", name="DatadeCheckout", required>
+                    
+                </fieldset>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>© Senac MS 2025 - Todos os Direitos Reservados</p>
+    </footer>
+
+</body>
+</html>

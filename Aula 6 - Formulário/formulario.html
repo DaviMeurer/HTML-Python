@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Formulário</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e7e8ea;
+            color: #333;
+        }
+        header, footer{
+            background-color: #1D2222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1{
+            font-size: 35px;
+            padding: 20px;
+        }
+        main{
+            width: 80%;
+            min-height: 300px;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0,0, 0, 0.2);
+            padding: 15px;
+        }
+
+        footer{
+            font-style: italic;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exemplo de formulário</h1>
+    </header>
+    <main>
+        <h2>Formulário de inscrição - Exemplo</h2>
+
+
+
+
+        <!-- action é a pagina web para onde eu vou enviar os dados-->
+         <!-- method: é como vou enviar. get é na URL e post é oculto -->
+        <form action="/salvar.html" method="get">
+            <div id="dadosPessoais">
+                <fieldset><!--grupo de informações-->
+                    <legend>Dados Pessoais</legend>
+
+                    <label for="input_nome">Nome:</label>
+                    <input type="text" id="input_nome" name="nome" placeholder="João Dev..." required>
+                    <br><br>
+
+                    <label for="input_email">E-mail:</label>
+                    <input type="email" id="input_email" name="email" placeholder="exemplo@mail.com" required>
+                    <br><br>
+
+                    <label for="input_senha">Senha:</label>
+                    <input type="password" id="input_senha" name="senha" required>
+                    <br><br>
+
+                    <label for="input_idade">Idade:</label>
+                    <input type="number" id="input_idade" name="idade" min="18" max="120"  required>
+                    <br><br>
+
+                </fieldset>
+            </div>
+            <br><br>
+
+            <div id="preferencias">
+                <fieldset>
+                    <legend>Preferências</legend>
+
+                    <label for="localiza">Localização:</label>
+                    <select id="localiza" name="localizacao" required>
+                        <option value="">Selecione</option>
+                        <optgroup label="Centro-Oeste"> 
+                            <option value="ms">Mato Grosso do Sul</option>
+                            <option value="go">Goias</option>
+                        </optgroup>
+                        <optgroup label="Sudeste"> 
+                            <option value="pr">Parana</option>
+                            <option value="pr">São Paulo</option>
+                        <optgroup>
+                    </select>
+                    <br><br>
+                    <!-- caixa de seleção, pode selecionar vários valores par o mesmo name-->
+                    <label>Interesses:</label>
+                    <input type="checkbox" id="programacao" name="interesses" value="programacao">
+                    <label for="programacao">Programação</label>
+                    <!-- atributo checked deixa marcado por padrão-->
+                    <input type="checkbox" id="jogos" name="interesses" value="jogos" checked>
+                    <label for="jogos">Jogos</label>
+                    <br><br>
+
+                    <!-- seleção única-->
+                    <label>Nível de inglês</label>
+                    <input type="radio" id="iniciante" name="ingles" value="iniciante">
+                    <label for="iniciante">Iniciante</label>
+
+                    <input type="radio" id="inter" name="ingles" value="intermediario">
+                    <label for="inter">Intermediário</label>
+
+                    <input type="radio" id="avancado" name="ingles" value="avancado">
+                    <label for="avancado">Avançado</label>
+                    <br><br>
+                    <!-- lista com sugestão ao digitar-->
+                    <label for="navegador">Navegador Favorito</label>
+                    <input id="navegador" name="navegador" list="lista-navegadores">
+                    <datalist id="lista-navegadores">
+                        <option value="Chrome">
+                        <option value="Firefox">
+                        <option value="Safari">
+                        <option value="Edge">
+                    </datalist>
+
+                    <!-- Slider seleção de uma faixa de valor numerico-->
+                    <label for="satisfacao">Satisfação(0-10)</label>
+                    <input type="range" id="satisfacao" name="satisfacao" min="0" max="10" 
+                        oninput="saidaSatisfacao.value=satisfacao.value">
+                    <output id="saidaSatisfacao">5</output>
+                    <br><br>
+
+                    <!-- area de texto, maxlength define a quantidade maxima de caracteres -->
+                    <label for="coment">Deixe um comentário:</label>
+                    <textarea id="coment" name="comentario" rows="4" cols="50" maxlength="10"></textarea>
+                    <br><br>
+
+                    <!-- campo para arquivo, accept serve para mostrar no explorer apenas o formato-->
+                    <label for="arquivo">Currículo</label>
+                    <input type="file" id="arquivo" name="arquivo" accept=".pdf,.doc.docx">
+
+                </fieldset>
+            </div>
+            <br><br>
+
+
+
+
+            <!-- type submit indica que o botão serve para enviar este formulário -->
+            <button type="submit">Enviar</button>
+        </form>
+
+
+
+
+
+
+    </main>
+    <footer>
+        © Rafael Martins 2025
+    </footer>
+    
+</body>
+</html>
