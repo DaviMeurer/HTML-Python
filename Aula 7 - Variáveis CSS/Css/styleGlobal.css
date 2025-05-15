@@ -1,0 +1,165 @@
+:root {
+    --primary-color: #cc00ff;
+    --second-color: #6c337a;
+    --background-color: #f4f4f4;
+    --font-color: #333;
+    --input-bg-color: #c2e0f4;
+    --button-hover: #d973f3;
+    --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+    --transition-duration: 0.3s;
+    --input-padding: 12px;
+    --font-size: 16px;
+}
+
+:root.dark-mode {
+    --primary-color: #bb86fc;
+    --second-color: #3700b3;
+    --background-color: #121212;
+    --font-color: #e0e0e0;
+    --input-bg-color: #333;
+    --button-hover: #6200ee;
+    --box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 8px;
+    --transition-duration: 0.3s;
+    --input-padding: 12px;
+    --font-size: 16px;
+}
+
+body.dark-mode {
+    background: linear-gradient(to top right, #121212, #333);
+}
+
+.container.dark-mode {
+    background-color: #1c1c1c;
+    color: var(--font-color);
+    box-shadow: var(--box-shadow);
+}
+
+h1.dark-mode {
+    color: var(--primary-color);
+}
+
+input[type="text"].dark-mode, input[type="password"].dark-mode {
+    background-color: var(--input-bg-color);
+    color: var(--font-color);
+    border-color: #444;
+}
+
+button.dark-mode {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button.dark-mode:hover {
+    background-color: var(--button-hover);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to top right, #f4f4f4, #e1e1e1);
+    font-family: 'Arial', sans-serif;
+    color: var(--font-color);
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: var(--font-size);
+    color: var(--font-color);
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: var(--input-padding);
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--input-bg-color);
+    font-size: var(--font-size);
+    color: var(--font-color);
+    transition: all var(--transition-duration);
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: var(--input-padding);
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: var(--font-size);
+    cursor: pointer;
+    transition: all var(--transition-duration);
+    box-shadow: var(--box-shadow);
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--font-color);
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+#toggle-dark-mode {
+    background-color: #6c337a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: var(--font-size);
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color var(--transition-duration), transform var(--transition-duration);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#toggle-dark-mode:hover {
+    background-color: #d973f3;
+    transform: translateY(-2px);
+}
+
+#toggle-dark-mode:active {
+    transform: translateY(2px);
+}

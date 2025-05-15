@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 1</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #ccc;
+        }
+        h1, h2{ /*h1 e h2*/
+            font-family: Verdana, 'Segoe UI', Tahoma;
+        }
+
+        main{
+            background: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+
+        footer{
+            background:  black;
+            color: white;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        img{
+            width: 50%;
+        }
+
+        /*menu*/
+        nav{
+            background-color: black;
+            padding: 10;
+        }
+
+        .menu{
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu li{
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .menu li a{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+        
+        .menu li a:hover{
+            background-color: gray;
+        }
+
+        .submenu{
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: black;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        /*mostrar o submenu quando passar o mouse no li do menu*/
+        .menu li:hover .submenu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pagina exemplo 1 </h1>
+    </header>
+
+    <nav><!--menu -->
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="sobre.html">Sobre</a>
+                <ul class="submenu">
+                    <li><a href="sobre.html#historia">Historia</a></li>
+                    <li><a href="sobre.html#missao">Missão</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="cursos.html">Cursos</a>
+                <ul class="submenu">
+                    <li><a href="cursos.html/">Livres</a></li>
+                    <li><a href="cursos.html/">Técnicos</a></li>
+                    <li><a href="cursos.html/">EAD</a></li>
+                    <li><a href="cursos.html/">Graduação</a></li>
+                </ul>
+            </li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2 id="historia">Historia</h2>
+            <p >O Senac MS é uma instituição de ensino comprometida com a
+                 excelência na formação profissional, oferecendo uma ampla
+                gama de cursos nas áreas de comércio, serviços, saúde, tecnologia
+                e turismo. Como uma escola de excelência, o Senac MS busca
+                capacitar seus alunos com conhecimentos atualizados e habilidades
+                práticas que atendem às necessidades do mercado de trabalho.
+                Com uma infraestrutura moderna, professores qualificados e metodologias
+                de ensino inovadoras, o Senac MS prepara seus estudantes para
+                se destacarem em suas carreiras e contribuírem para o desenvolvimento
+                econômico e social do estado.
+            </p>
+            <p >O Senac MS é uma instituição de ensino comprometida com a
+                excelência na formação profissional, oferecendo uma ampla
+               gama de cursos nas áreas de comércio, serviços, saúde, tecnologia
+               e turismo. Como uma escola de excelência, o Senac MS busca
+               capacitar seus alunos com conhecimentos atualizados e habilidades
+               práticas que atendem às necessidades do mercado de trabalho.
+               Com uma infraestrutura moderna, professores qualificados e metodologias
+               de ensino inovadoras, o Senac MS prepara seus estudantes para
+               se destacarem em suas carreiras e contribuírem para o desenvolvimento
+               econômico e social do estado.
+           </p>
+           <p >O Senac MS é uma instituição de ensino comprometida com a
+                excelência na formação profissional, oferecendo uma ampla
+                gama de cursos nas áreas de comércio, serviços, saúde, tecnologia
+                e turismo. Como uma escola de excelência, o Senac MS busca
+                capacitar seus alunos com conhecimentos atualizados e habilidades
+                práticas que atendem às necessidades do mercado de trabalho.
+                Com uma infraestrutura moderna, professores qualificados e metodologias
+                de ensino inovadoras, o Senac MS prepara seus estudantes para
+                se destacarem em suas carreiras e contribuírem para o desenvolvimento
+                econômico e social do estado.
+            </p>
+        </section>
+        <section>
+            <h2 id="missao">Missão</h2>
+            <p >O Senac MS é uma instituição de ensino comprometida com a
+                 excelência na formação profissional, oferecendo uma ampla
+                gama de cursos nas áreas de comércio, serviços, saúde, tecnologia
+                e turismo. Como uma escola de excelência, o Senac MS busca
+                capacitar seus alunos com conhecimentos atualizados e habilidades
+                práticas que atendem às necessidades do mercado de trabalho.
+                Com uma infraestrutura moderna, professores qualificados e metodologias
+                de ensino inovadoras, o Senac MS prepara seus estudantes para
+                se destacarem em suas carreiras e contribuírem para o desenvolvimento
+                econômico e social do estado.
+            </p>
+        </section>
+        
+    </main>
+    <footer>
+        <p>Senac MS Copyright ©
+            2023. Todos os Direitos Reservados
+        </p>
+    </footer>
+
+</body>
+</html>

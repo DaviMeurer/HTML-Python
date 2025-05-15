@@ -6,60 +6,88 @@
     <style> /* Estilização */
         body{
             margin: 0;
-            padding: 10;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #e7e8ea;
-            color: #333
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #6a7f91, #b9c8d0);
+            color: #333;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
-        header{
-            background-color: black;
+        header {
+            background-color: #333;
             color: white;
             text-align: center;
+            position: relative;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 32px;
+            letter-spacing: 2px;
+            margin: 0;
+            font-weight: 600;
+        }
+        main {
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+            position: relative;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             padding: 20px;
         }
-        h1{
-            font-size: 30px;
-            padding: 20px
-        }
-        main{
-            width: 80%;
-            min-height: 300px;
-            margin: 40px auto;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0,0, 0, 0.2);
+        footer {
+            background: #333;
+            color: white;
+            margin: 0;
             padding: 15px;
+            font-size: 14px;
+            text-align: center;
+            position:relative;
+            bottom: 0;
+            width: 100%;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+        footer p {
+            margin: 0;
+        }
+        img{
+            margin-bottom: 15px;
         }
     </style>
 </head>
 
 <body> <!-- Conteúdo Principal -->
     <header> <!-- Cabeçalho -->
-        <h1>Hotel ÉdaHora (mt bão o site msmmm)</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/235/235889.png", width="140px">
+        <h1>HOTEL ÉdaHORA</h1>
     </header>
 
     <main> <!-- Conteúdo Primário -->
         <h2>Formulário de Reserva</h2>
-        <form action="/salvar.html" method="post">
+        <form action="salvar.html" method="get">
 
-            <div id="informaçõesPessoais">
+            <div id="informaçõesPessoais"> <!-- Dados Pessoais -->
                 <fieldset>
-                    <legend>Informações Pessoais</legend>
+                    <legend style="font-style: italic; font-weight: bolder"> Informações Pessoais</legend>
 
-                    <label for="txt_nome">Nome</label> <!-- Hóspede -->
+                    <label for="txt_nome">Nome</label> <!-- Hóspede --><br>
                     <input type="text", id="txt_nome", name="nomeHospede", placeholder="Davi Meurer..." required>
                     <br></br>
 
-                    <label for="em_email">E-mail</label> <!-- E-mail -->
+                    <label for="em_email">E-mail</label> <!-- E-mail --><br>
                     <input type="email", id="em_email", name="Email", placeholder="joao123@gmail.com" required>
                     <br></br>
 
-                    <label for="tel_telefone">Telefone</label> <!-- Telefone -->
-                    <input type="", id="tel_telefone", name="Telefone", placeholder="(xx) 9xxxx-xxxx">
+                    <label for="tel_telefone">Telefone</label> <!-- Telefone --><br>
+                    <input type="tel", id="tel_telefone", name="Telefone", placeholder="(xx) 9xxxx-xxxx", minlength="11">
                     <br><br>
 
-                    <label for="txt_endereco">Endereço Completo</label> <!-- Endereço -->
-                    <input type="text" id="txt_endereco" name="Endereco" placeholder="Rua/Avenida, Numero; Bairro, Cidade; CEP"
+                    <label for="txt_endereco">Endereço Completo</label> <!-- Endereço --><br>
+                    <input type="text" id="txt_endereco" name="Endereco" placeholder="Rua, Numero; Bairro, Cidade; CEP"
                     style="min-width: 280px;">
                     <br>
 
@@ -67,36 +95,77 @@
             </div>
             <br>
             
-            <div id="formularioDados">
+            <div id="formularioDados"> <!-- Dados do Formulário -->
                 <fieldset>
-                    <legend>Dados Do Formulário</legend>
+                    <legend style="font-style: italic; font-weight: bolder; ">Dados Do Formulário</legend>
 
-                    <label for="date_checkin">Data de Check-in</label>
+                    <label for="date_checkin">Data de Check-in</label><br>
                     <input type="date", id="date_checkin", name="DatadeCheckin", required>
                     <br><br>
 
-                    <label for="date_checkout">Data de Check-out</label>
+                    <label for="date_checkout">Data de Check-out</label><br>
                     <input type="date", id="date_checkout", name="DatadeCheckout", required>
+                    <br><br>
 
                     <label>Tamanho do Quarto</label>
-                    <input type="radio" id="rgpequeno" name="Quarto" value="pequeno">
-                    <label for="iniciante">Iniciante</label>
+                    <br>
+                    <input type="radio" id="radio_solteiro" name="Quarto" value="solteiro">
+                    <label for="radio_solteiro">Solteiro</label>
 
-                    <input type="radio" id="inter" name="ingles" value="intermediario">
-                    <label for="inter">Intermediário</label>
+                    <input type="radio" id="radio_duplo" name="Quarto" value="duplo">
+                    <label for="radio_duplo">Duplo</label>
 
-                    <input type="radio" id="avancado" name="ingles" value="avancado">
-                    <label for="avancado">Avançado</label>
+                    <input type="radio" id="radio_suite" name="Quarto" value="suite">
+                    <label for="radio_suite">Suíte</label>
                     <br><br>
-                    
+
+                    <label>Número de Hóspedes</label>
+                    <input type="number", id="numberHospede", name="NHospede", maxlength="10" required>
+                    <br><br>
+                    <br>    
+
+
+                    <label for="coment">Preferências / Informações Adicionais</label><br>
+                    <textarea id="coment", name="comentario", rows="4", cols="50", maxlength="255"></textarea>
+                    <br><br>
+
+                    <label for="pagamento">Método de Pagamento</label>
+                    <select id="pagamento" name="metodoPagamento" required>
+                        <optgroup label="Cartões">
+                            <option value="Cartão de Crédito Visa">Cartão de Crédito Visa</option>
+                            <option value="Cartão de Crédito Mastercard">Cartão de Crédito Mastercard</option>
+                            <option value="Cartão de Crédito Elo">Cartão de Crédito Elo</option>
+                            <option value="Cartão de Débito Banco do Brasil">Cartão de Débito Banco do Brasil</option>
+                            <option value="Cartão de Débito Caixa Econômica">Cartão de Débito Caixa Econômica</option>
+                            <option value="Cartão de Débito Itaú">Cartão de Débito Itaú</option>
+                            <option value="Cartão de Crédito Nubank">Cartão de Crédito Nubank</option>
+                            <option value="Cartão de Crédito Santander">Cartão de Crédito Santander</option>
+                        </optgroup>
+                        <optgroup label="Outros Métodos de Pagamento">
+                            <option value="Boleto Bancário">Boleto Bancário</option>
+                            <option value="PIX">PIX</option>
+                            <option value="Débito em Conta">Débito em Conta</option>
+                            <option value="Transferência Bancária">Transferência Bancária</option>
+                            <option value="Pagamento via Link de Pagamento">Pagamento via Link de Pagamento</option>
+                            <option value="Recarga de Celular">Recarga de Celular</option>
+                        </optgroup>
+                        <optgroup label="Carteiras Digitais">
+                            <option value="Carteira Digital PayPal">Carteira Digital PayPal</option>
+                            <option value="Carteira Digital PicPay">Carteira Digital PicPay</option>
+                            <option value="Carteira Digital Mercado Pago">Carteira Digital Mercado Pago</option>
+                        </optgroup>
+                    </select>
+                    <br><br>
                 </fieldset>
+                <br>
+                <button type="submit", style="background-color:azure; border-color:aquamarine;">Enviar</button>
+                <a>textos</a>
             </div>
             
-
         </form>
     </main>
 
-    <footer style="background: black; color: white; padding: 20px; bottom: 0; position: absolute; width: 100%; text-align: center;">
+    <footer>
         <p>© Hotel ÉdaHora 2025 - Todos os Direitos Reservados</p>
     </footer>
 
