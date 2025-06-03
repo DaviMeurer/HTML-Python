@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Usuários</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Roboto', sans-serif;
+            flex: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        header{
+            text-align: center;
+            margin-bottom: 35px;
+            background: linear-gradient(to bottom, #a0e9ff, #ffffff);
+            padding: 25px;
+        }
+        #imgLogin{
+            height: auto;
+            width: 150px;
+        }
+        #titulo{
+            font-size: 24px;
+            font-family: 'Roboto';
+            margin-bottom: 25px;
+        }
+        .input{
+            border-width: thin;
+            padding-left: 10px;
+            border-color: rgb(223, 222, 222);
+        }
+        .div_input{
+            margin-top: 10px;
+        }
+        form{
+            border: 2px solid #e6e6e6;
+            width: 400px;
+            height: 275px;
+            padding: 20px;
+            margin: 20px auto;
+            box-sizing: border-box;
+            border-radius: 8px;
+            background-color: #f9f9f9;;
+        }
+        #botao{
+            margin-top: 0px;
+            font-size: px;
+            height: 40px;
+            width: 80px;
+            background-color: rgb(204, 241, 253);
+            border-color: whitesmoke;
+            border-radius: 10px;
+            margin-top: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <img src="src/img_login.png", alt="Descrição mt épica", id="imgLogin">
+
+    </header>
+    
+    <main>
+
+        <form>
+            <p id="titulo">Login</p>
+
+            <div class="div_input">
+                <p>E-mail</p>
+                <input class="input" style="height: 30px; width: 250px; margin-top: 5px;" type="email" placeholder="E-mail">
+            </div>
+            <div class="div_input">
+                <p>Senha</p>
+                <input class="input" style="height: 30px; width: 250px; margin-top: 5px;" type="password" placeholder="Senha">
+            </div>
+
+            <input id="botao" type="submit" value="Salvar">
+        </form>
+
+    </main>
+
+</body>
+
+</html>
