@@ -1,8 +1,8 @@
 # Módulos à serem baixados
-> pip install flask
-> pip install flask-cors
-> pip insall mysql-connector-python
-
+``bashpip install flask
+pip install flask-cors
+pip insall mysql-connector-python
+``
 # Validador de Usuários - Web App
 
 ## Objetivo
