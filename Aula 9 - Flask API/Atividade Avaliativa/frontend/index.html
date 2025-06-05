@@ -90,6 +90,43 @@
 
     </main>
 
+    <script>
+        const API_URL = "http://localhost:5000/login";
+
+        document.querySelector("form").addEventListener("submit", async function(event) {
+            event.preventDefault(); // evita o envio tradicional do formulário
+
+            const email = document.querySelector('input[type="email"]').value;
+            const senha = document.querySelector('input[type="password"]').value;
+
+            if (!email || !senha) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            try {
+                const resposta = await fetch(API_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ email, senha })
+                });
+
+                const dados = await resposta.json();
+
+                if (resposta.ok) {
+                    alert(dados.mensagem); // "Login bem-sucedido!"
+                } else {
+                    alert(dados.erro); // "Usuário ou senha incorretos."
+                }
+            } catch (erro) {
+                alert("Erro ao conectar com o servidor.");
+                console.error(erro);
+            }
+        });
+    </script>
+
 </body>
 
 </html>
