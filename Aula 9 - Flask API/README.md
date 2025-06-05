@@ -2,7 +2,7 @@
 ``
 pip install flask, flask-cors, mysql-connector-python
 ``
-# Validador de Usuários - Web App
+# Atividade Avaliativa
 
 ## Objetivo
 
