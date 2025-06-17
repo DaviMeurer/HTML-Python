@@ -1,0 +1,9 @@
+flask==3.1.1
+mysql-connector-python==9.3.0
+python-dotenv==1.1.0
+
+#01- pip show flask    "DESCOBRIR A VERSÃO DO FLASK"
+#02- pip show mysql-connector-python    "DESCOBRIR A VERSÃO MYSQL" 
+#03- pip install dotenv   "CASO NÃO TENHA O DOTENV INSTALADO"
+#04- pip show python-dotenv    "DESCOBRIR A VERSÃO DOTENV"
+#05- python --version    "DESCOBRIR A VERSÃO PYTHON"
